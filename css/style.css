@@ -1,0 +1,330 @@
+/* ====================== Connect font ======================*/
+@font-face {
+	font-family: "SEGA";
+	src: url("../fonts/sega.woff2") format("woff2"), 
+	url("../fonts/sega.woff") format("woff");
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Arcade Classic";
+	src: url("../fonts/arcadeclassic.woff2") format("woff2"), 
+	url("../fonts/arcadeclassic.woff") format("woff");
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+/* ====================== CCS Properties Home Work=============================== */
+html,
+body {
+	height: 100%;
+}
+body {
+	font-family: "Arcade Classic", fantasy;
+	line-height: 26px;
+	background: #000;
+}
+[class*="__container"] {
+	max-width: 1230px;
+	margin: 0 auto;
+}
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+}
+/* =======================SEGA-INTRO===================== */
+.sega-intro {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+	opacity: 0;
+	visibility: hidden;
+	animation: intro-apperance 4s 1s;
+}
+.text-intro {
+	font-size: 3vw;
+	line-height: 1.7;
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	word-spacing: 7px;
+	letter-spacing: 2px;
+	padding: 35px 110px;
+}
+/* ========================SEGA-LOGO===================== */
+.sega-logo {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+	animation: sega-appearance 10s 4.5s;
+}
+.sega-logo__item {
+	font-family: "SEGA", fantasy;
+	text-transform: uppercase;
+	font-size: 120px;
+	background: linear-gradient(
+		60deg,
+		rgb(132, 224, 255) 0%,
+		rgba(0,170,255,1) 10%,
+		rgba(53,152,251,1) 20%,
+		rgba(0 59 191) 30%,
+		rgba(0 59 191) 40%,
+		rgba(53,152,251,1) 50%,
+		rgba(0,170,255,1) 60%,
+		rgb(132, 224, 255) 70%,
+		rgba(53,152,251,1) 80%,
+		rgba(0 59 191) 90%,
+		rgba(0 59 191) 100%);
+	background-size: 360%;
+	line-height: 1;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	filter: drop-shadow(-5px -5px 0px #ffffff);
+	animation: logo-appearance 4s 4.5s, logo-animation 4s 7s, logo-opacity 4s 10s;
+}
+/* ========================KONAMI======================== */
+.konami {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	opacity: 0;
+	visibility: hidden;
+	animation: konami-appearance 10s 13s;
+}
+.konami__star {
+	max-width: 60px;
+}
+.konami__star img{
+	max-width: 100%;
+}
+/* ========================TURTLES======================== */
+.turtles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	opacity: 0;
+	visibility: hidden;
+	animation: turtles-appearance 6s 11s;
+}
+.turtles__container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	animation: fond 1s 15.4s linear;
+}
+.turtles__leo,
+.turtles__raph,
+.turtles__mikey,
+.turtles__don {
+	max-width: 30vw;
+}
+.turtles__leo img,
+.turtles__raph img,
+.turtles__mikey img,
+.turtles__don img {
+	max-width: 100%;
+}
+.turtles__leo {
+	transform: translate(-120%, -120%);
+	animation: leo-appearance 0.6s 12s forwards, sepia 0.6s 14.4s forwards;
+}
+.turtles__raph {
+	transform: translate(120%, -120%);
+	animation: raph-appearance 0.6s 12.6s forwards, sepia 0.6s 14.4s forwards;
+}
+.turtles__mikey {
+	transform: translate(-120%, 120%);
+	animation: mikey-appearance 0.6s 13.2s forwards, sepia 0.6s 14.4s forwards;
+}
+.turtles__don {
+	transform: translate(120%, 120%);
+	animation: don-appearance 0.6s 13.8s forwards, sepia 1s 14.4s forwards;
+}
+/* ======================JUMP====================== */
+.jump {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	opacity: 0;
+	visibility: hidden;
+	animation: jump-appearance 5s 17s;
+}
+.jump__raph {
+	max-width: 415px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(-540px, -590px);
+	animation: raph-jump 1.2s 17s;
+}
+.jump__mikey {
+	max-width: 283px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(550px, -830px);
+	animation: mikey-jump 1.2s 18s;
+}
+.jump__don {
+	max-width: 413px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(-540px, -590px);
+	animation: raph-jump 1.2s 19s;
+}
+.jump__leo {
+	max-width: 402px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(-730px, -800px);
+	animation: leo-jump 1.2s 20s;
+}
+
+.jump__leo img,
+.jump__raph img,
+.jump__mikey img,
+.jump__don img {
+	max-width: 100%;
+}
+/* ======================ANIMATION======================= */
+@keyframes leo-jump {
+	0% {transform: translate(-730px, -800px);}
+	65% {transform: translate(-730px, 0px);}
+	70% {transform: translate(-730px, 0px);}
+	100% {transform: translate(-730px, 1050px);}
+}
+@keyframes mikey-jump {
+	0% {transform: translate(550px, -830px);}
+	100% {transform: translate(50px, 1050px);}
+}
+@keyframes raph-jump {
+	0% {transform: translate(-540px, -590px);}
+	100% {transform: translate(50px, 1030px);}
+}
+@keyframes jump-appearance {
+	0% {opacity: 0;visibility: hidden;}
+	10% {opacity: 1;visibility: visible;}
+	90% {opacity: 1;visibility: visible;}
+	100% {opacity: 0;visibility: hidden;}
+}
+@keyframes fond {
+	0% {background: #fff;}
+	15% {background: #000;}
+	30% {background: #fff;}
+	45% {background: #000;}
+	60% {background: #fff;}
+	75% {background: #000;}
+	90% {background: #fff;}
+	100% {background: #000;}
+}
+@keyframes sepia {
+	0% {filter: sepia(0);}
+	100% {filter: sepia(1);}
+}
+@keyframes leo-appearance {
+	0% {transform: translate(-120%, -120%);}
+	100% {transform: translate(0, 0);}
+}
+@keyframes raph-appearance {
+	0% {transform: translate(120%, -120%);}
+	100% {transform: translate(0, 0);}
+}
+@keyframes mikey-appearance {
+	0% {transform: translate(-120%, 120%);}
+	100% {transform: translate(0, 0);}
+}
+@keyframes don-appearance {
+	0% {transform: translate(120%, 120%);}
+	100% {transform: translate(0, 0);}
+}
+@keyframes turtles-appearance {
+	0% {opacity: 0;visibility: hidden;}
+	10% {opacity: 1;visibility: visible;}
+	90% {opacity: 1;visibility: visible;}
+	100% {opacity: 0;visibility: hidden;}
+}
+@keyframes intro-apperance {
+	0% {opacity: 0;visibility: hidden;}
+	20% {opacity: 1;visibility: visible;}
+	80% {opacity: 1;visibility: visible;}
+	100% {opacity: 0;visibility: hidden;}
+}
+@keyframes sega-appearance {
+	0% {opacity: 0;visibility: hidden;}
+	50% {opacity: 1;visibility: visible;}
+	100% {opacity: 0;visibility: hidden;}
+}
+@keyframes konami-appearance {
+	0% {opacity: 0;visibility: hidden;}
+	50% {opacity: 1;visibility: visible;}
+	100% {opacity: 0;visibility: hidden;}
+}
+@keyframes logo-appearance {
+	0% {opacity: 0;visibility: hidden;}
+	100% {opacity: 1;visibility: visible;}
+}
+@keyframes logo-animation {
+	0% {background-position: right}
+	100% {background-position: left;}
+}
+@keyframes logo-opacity {
+	0% {opacity: 1;}
+	100% {opacity: 0;transform: translate(0,-100px);}
+}
+/* ==========================FOOTER========================= */
+.footer {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	background: transparent;
+	color: #fff; 
+}
+.footer__title {
+	display: inline-block;
+	font-size: 1.5vw;
+	padding: 22px;
+	word-spacing: 8px;
+}
+.footer__link img{
+	max-width: 3.5vw;
+	transition: all 0.4s ease 0s;
+}
+.footer__link img:last-child {
+	position: absolute;
+	top: -10vh;
+	right: 27vw;
+	max-width: 100px;
+	opacity: 0;
+	visibility: hidden;
+}
+.footer__link:hover img:first-child {
+	transform: rotate(-10deg) scale(1.2);
+}
+.footer__link:hover img:last-child {
+	opacity: 1;
+	visibility: visible;
+	right: 30vw;
+	transform: scale(1.2);
+}
